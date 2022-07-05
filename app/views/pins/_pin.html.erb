@@ -3,5 +3,13 @@
     <strong>Title:</strong>
     <%= pin.title %>
   </p>
-
+  <p>
+    <%= image_tag(pin.image.variant(resize_to_limit: [150, 150])) %>
+  </p>
+  <hr>
+  <p>
+    <% pin.pictures.each do |picture| %>
+      <%= image_tag(picture, style: "width: 150px;") %>
+    <% end %>
+  </p>
 </div>
